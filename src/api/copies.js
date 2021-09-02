@@ -14,3 +14,13 @@ export const indexCopies = (user) => {
     }
   })
 }
+
+export const showCopy = (user, copy) => {
+  return axios({
+    method: 'GET',
+    url: apiUrl + '/copies/' + copy.id,
+    headers: {
+      Authorization: `Token ${user.token}`
+    }
+  })
+}
